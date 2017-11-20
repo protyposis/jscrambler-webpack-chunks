@@ -8,4 +8,4 @@ Instructions:
  * `npm install`
  * copy `jscrambler.config.js.example` to `jscrambler.config.js` and fill in API credentials and application Id
  * run `npm start`
- * open console in browser, check logged modules and observe that not all names are scrambled
+ * open console in browser (Chrome or Firefox), check logged modules and observe that not all names are scrambled
