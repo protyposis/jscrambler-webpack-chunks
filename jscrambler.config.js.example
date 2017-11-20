@@ -1,0 +1,8 @@
+// Rename to jscrambler.config.js and fill in the correct values
+module.exports = {
+  keys: {
+    accessKey: 'my-access-key',
+    secretKey: 'my-secret-key',
+  },
+  applicationId: 'my-app-id',
+};
