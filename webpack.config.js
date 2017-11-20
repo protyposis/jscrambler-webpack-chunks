@@ -2,6 +2,7 @@ const path = require('path');
 const JscramblerWebpack = require('jscrambler-webpack-plugin');
 const jscramblerConfig = require('./jscrambler.config');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const JavaScriptObfuscator = require('webpack-obfuscator');
 
 // https://jscrambler.com/de/help/webapi/documentation
 const jScramblerParams = [
@@ -52,12 +53,14 @@ module.exports = {
       },
     ],
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: './',
     watchContentBase: true,
   },
   plugins: [
     new JscramblerWebpack({
+      enable: false,
       params: jScramblerParams,
       keys: jscramblerConfig.keys,
       applicationId: jscramblerConfig.applicationId,
@@ -75,6 +78,13 @@ module.exports = {
         es6: false,
         es7: false
       }
+    }),
+    new JavaScriptObfuscator ({
+      rotateUnicodeArray: true,
+      mangle: true,
+      renameGlobals: true,
+      sourceMap: true,
+      sourceMapMode: 'separate',
     }),
     new WriteFilePlugin(),
   ],
