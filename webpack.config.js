@@ -42,6 +42,10 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    contentBase: './',
+    watchContentBase: true,
+  },
   plugins: [
     new JscramblerWebpack({
       params: jScramblerParams,
