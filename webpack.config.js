@@ -8,7 +8,16 @@ const jScramblerParams = [
   { name: "whitespaceRemoval" },
   {
     name: "identifiersRenaming",
-    options: { mode: "SAFEST" }
+    options: {
+      mode: "SAFEST",
+      "includeList": [
+        //"ChunkTwo",
+        //"doStuff",
+        //"innerClassInstance",
+        //"instanceFieldThatShouldBeObfuscated",
+        //"instanceMethodThatShouldBeObfuscated",
+      ],
+    }
   }, {
     name: "duplicateLiteralsRemoval",
     options: { mode: "optimization" }
