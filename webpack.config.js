@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     'core': './src/index.js',
+    'chunk2': './src/ChunkTwo.js',
   },
   output: {
     path: path.resolve('./dist/'),
