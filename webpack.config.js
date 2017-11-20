@@ -1,6 +1,7 @@
 const path = require('path');
 const JscramblerWebpack = require('jscrambler-webpack-plugin');
 const jscramblerConfig = require('./jscrambler.config');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 
 // https://jscrambler.com/de/help/webapi/documentation
 const jScramblerParams = [
@@ -26,7 +27,7 @@ module.exports = {
     'chunk2': './src/ChunkTwo.js',
   },
   output: {
-    path: path.resolve('./dist/'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'chunks-[name].js',
     libraryTarget: 'umd',
     library: ['chunks', '[name]'],
@@ -66,5 +67,6 @@ module.exports = {
         es7: false
       }
     }),
+    new WriteFilePlugin(),
   ],
 };
