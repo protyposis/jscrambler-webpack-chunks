@@ -1,4 +1,4 @@
-staticFieldThatShouldBeObfuscated = 42;
+let staticFieldThatShouldBeObfuscated = 42;
 
 export class ChunkOneInnerClassThatShouldBeObfuscated {
 
