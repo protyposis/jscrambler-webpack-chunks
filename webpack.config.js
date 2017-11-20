@@ -9,5 +9,16 @@ module.exports = {
     filename: 'chunks-[name].js',
     libraryTarget: 'umd',
     library: ['chunks', '[name]'],
-  }
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015'],
+        },
+      },
+    ],
+  },
 };

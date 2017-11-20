@@ -1,0 +1,17 @@
+{
+  "name": "jscrambler-webpack-chunks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/chunks-core.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
